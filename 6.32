@@ -1,0 +1,35 @@
+ #include <iostream>
+using namespace std;
+ 
+int qualityPoints(int);
+ 
+int main()
+{
+   int average;
+ 
+   cout << "Enter student's average (between 0 and 100): ";
+   cin >> average;
+ 
+   while(average < 0 || average > 100)
+   {
+      cout << "Enter correct student's average value (between 0 and 100): ";
+      cin >> average;
+   }
+   cout << qualityPoints(average);
+ 
+   return 0;
+}
+ 
+int qualityPoints(int average)
+{
+   if(average >= 90)
+      return 4;
+   else if( average >= 80)
+      return 3;
+   else if(average >= 70)
+      return 2;
+   else if(average >= 60)
+      return 1;
+   else
+      return 0;
+}
